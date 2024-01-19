@@ -45,7 +45,7 @@ class MyCustomFormState extends State<MyCustomForm> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('Are you sure?'),
+          title: const Text('Are you sure 1?'),
           content: const Text('Do you want to close this page?'),
           actions: [
             TextButton(
@@ -88,7 +88,7 @@ class MyCustomFormState extends State<MyCustomForm> {
                   // If the form is valid, display a snackbar. In the real world,
                   // you'd often call a server or save the information in a database.
                   ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(content: Text('Processing Data')),
+                    const SnackBar(content: Text('Processing Data 2')),
                   );
                 }
               },

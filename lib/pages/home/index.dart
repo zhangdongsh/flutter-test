@@ -202,7 +202,8 @@ class HomeComponentState extends State<MyHomePage> {
         transitionType = TransitionType.inFromLeft;
       } else if (key == "preset-fade") {
         hexCode = "#F700D2";
-        message = "This screen should have appeared with a fade in transition";
+        message =
+            "This screen should have appeared with a fade in transition 2";
         transitionType = TransitionType.fadeIn;
       } else if (key == "pop-result") {
         transitionType = TransitionType.native;
