@@ -243,7 +243,7 @@ class HomeComponentState extends State<MyHomePage> {
 
       Application.router.navigateTo(
         context,
-        "/demo?message=$message&color_hex=$hexCode",
+        "/demo?message=msg&color_hex=$hexCode&message=2&id=2",
         transition: TransitionType.custom,
         transitionBuilder: transition,
         transitionDuration: const Duration(milliseconds: 600),
