@@ -6,6 +6,8 @@
  * Copyright (c) 2019 Yakka, LLC. All rights reserved.
  * See LICENSE for distribution and usage details.
  */
+import 'dart:convert';
+
 import 'package:flutter_application_2/pages/detail/index.dart';
 import 'package:flutter_application_2/pages/webview/index.dart';
 
@@ -21,12 +23,15 @@ var rootHandler = Handler(
 });
 
 var detailHandler = Handler(
+    type: HandlerType.function,
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
-  return const DetailPage();
-});
+      return const DetailPage();
+    });
 
 var demoRouteHandler = Handler(
     handlerFunc: (BuildContext? context, Map<String, List<String>> params) {
+  var param = jsonEncode('params');
+  print('params: $param');
   String? message = params["message"]?.first;
   String? colorHex = params["color_hex"]?.first;
   String? result = params["result"]?.first;
